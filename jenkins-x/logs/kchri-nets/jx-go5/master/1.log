@@ -1,0 +1,29 @@
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ngwxb[0m
+{"level":"warn","ts":1575372887.5822575,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575372887.5828443,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-67pq6[0m
+{"level":"warn","ts":1575372887.943881,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575372887.9460523,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-kchri-nets-jx-go5-master-zf9kv[0m
+{"level":"warn","ts":1575372895.8763244,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575372896.126322,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/jx-go5.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/jx-go5 main.go
+
+Showing logs for build [32mkchri-nets-jx-go5-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+2019/12/03 11:35:07 Error executing command: fork/exec /busybox/sh: permission denied
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
